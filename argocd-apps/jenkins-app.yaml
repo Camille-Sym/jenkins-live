@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Camille-Sym/demoapp.git
+    repoURL: https://github.com/Camille-Sym/jenkins-live.git
     path: argocd-apps
     targetRevision: HEAD
     helm:
       valueFiles:
-        - ../helm-charts/jenkins-values.yaml
+        - ../jenkins/values.yaml
       version: v3
   destination:
     server: https://kubernetes.default.svc
