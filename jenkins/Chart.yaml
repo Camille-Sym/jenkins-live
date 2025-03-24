@@ -1,0 +1,9 @@
+apiVersion: v2
+name: jenkins-live-chart
+version: 0.1.0
+description: A simple chart to deploy Jenkins via ArgoCD and OCI
+type: application
+dependencies:
+  - name: jenkins
+    repository: "oci://ghcr.io/jenkinsci/helm-charts"
+    version: "4.12.0" # Example version - Replace with the version you want
