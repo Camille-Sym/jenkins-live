@@ -1,0 +1,5 @@
+jenkins:
+  fullnameOverride: jenkins
+  service:
+    type: ClusterIP  # Or NodePort for testing
+    port: 8080
