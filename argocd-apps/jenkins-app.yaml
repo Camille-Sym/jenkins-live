@@ -7,11 +7,11 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Camille-Sym/jenkins-live.git
-    path: argocd-apps
+    path: jenkins
     targetRevision: HEAD
     helm:
       valueFiles:
-        - ../jenkins/values.yaml
+        - values.yaml
       version: v3
   destination:
     server: https://kubernetes.default.svc
