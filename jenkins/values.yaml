@@ -1,7 +1,5 @@
 jenkins:
   fullnameOverride: jenkins
-  controller:
-    admin:
-      username: "test-admin"
-      password: "test-password"
-      createSecret: true
+  service:
+    type: ClusterIP
+    port: 8080
