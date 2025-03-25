@@ -1,15 +1,5 @@
 jenkins:
   fullnameOverride: jenkins
-  casc:
-    enabled: true
-    defaultConfig: false
-    configScripts:
-      testAdmin: |
-        securityRealm:
-          local:
-            users:
-            - id: "testadmin"
-              password: "testpassword"
-              roles: "administrator"
-        authorizationStrategy:
-          unsecured: false
+  service:
+    type: ClusterIP
+    port: 8080
