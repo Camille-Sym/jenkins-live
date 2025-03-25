@@ -1,3 +1,5 @@
 jenkins:
   fullnameOverride: jenkins
-  serviceType: NodePort
+  service:
+    type: NodePort  # Or LoadBalancer
+    port: 8080
