@@ -1,5 +1,5 @@
 jenkins:
   fullnameOverride: jenkins
   service:
-    type: NodePort
+    type: ClusterIP
     port: 8080

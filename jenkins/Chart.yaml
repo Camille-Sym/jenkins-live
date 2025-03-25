@@ -5,5 +5,5 @@ description: A simple chart to deploy Jenkins via ArgoCD and OCI
 type: application
 dependencies:
   - name: jenkins
-    version: "5.6.0" # Example version - Replace with the version you want
     repository: "oci://ghcr.io/jenkinsci/helm-charts"
+    version: "4.12.0"
