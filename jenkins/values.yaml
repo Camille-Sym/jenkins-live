@@ -1,5 +1,19 @@
 jenkins:
   fullnameOverride: jenkins
-  service:
-    type: NodePort  # Or LoadBalancer
-    port: 8080
+  casc:
+    enabled: true
+    defaultConfig: true
+    configScripts:
+      adminUser: |
+        securityRealm:
+          local:
+            users:
+            - id: "admin"
+              password: "${JENKINS_ADMIN_PASSWORD}" # Use the secret value
+              roles: "administrator"
+        authorizationStrategy:
+          unsecured: false # Or your desired strategy
+    secrets:
+      - name: jenkins-admin-password
+        secretName: jenkins
+        key: chart-admin-password
