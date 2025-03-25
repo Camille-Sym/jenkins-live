@@ -6,4 +6,4 @@ type: application
 dependencies:
   - name: jenkins
     repository: "oci://ghcr.io/jenkinsci/helm-charts"
-    version: 2.492.2
+    version: 5.8.24
