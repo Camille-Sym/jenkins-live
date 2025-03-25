@@ -3,6 +3,8 @@ jenkins:
   service:
     type: ClusterIP
     port: 8080
-  JCasC:
-    # -- Enables default Jenkins configuration via configuration as code plugin
-    defaultConfig: true
+  controller:
+    admin:
+      username: "your-desired-username"
+      password: "your-desired-password"
+      createSecret: true
