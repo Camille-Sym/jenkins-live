@@ -17,7 +17,7 @@ spec:
       version: v3
   destination:
     server: https://kubernetes.default.svc
-    namespace: demoapp
+    namespace: jenkins
   syncPolicy:
     automated:
       prune: true
