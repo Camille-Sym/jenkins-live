@@ -1,5 +1,9 @@
 jenkins:
   fullnameOverride: jenkins
   service:
-    type: ClusterIP
+    type: ClusterIP  # Or NodePort for testing
     port: 8080
+  controller:
+    admin:
+      username: "my-admin"  # Replace "my-admin" with your desired username
+      password: "Caallo.2002"  # Replace "my-secret-password" with your desired password
