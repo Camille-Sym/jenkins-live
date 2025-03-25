@@ -2,18 +2,14 @@ jenkins:
   fullnameOverride: jenkins
   casc:
     enabled: true
-    defaultConfig: true
+    defaultConfig: false
     configScripts:
-      adminUser: |
+      testAdmin: |
         securityRealm:
           local:
             users:
-            - id: "admin"
-              password: "${JENKINS_ADMIN_PASSWORD}" # Use the secret value
+            - id: "testadmin"
+              password: "testpassword"
               roles: "administrator"
         authorizationStrategy:
-          unsecured: false # Or your desired strategy
-    secrets:
-      - name: jenkins-admin-password
-        secretName: jenkins
-        key: chart-admin-password
+          unsecured: false
