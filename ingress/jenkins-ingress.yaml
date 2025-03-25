@@ -2,13 +2,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: jenkins-ingress
-  namespace: demoapp  # Or the namespace where Jenkins is deployed
+  namespace: jenkins
   annotations:
-    spec.ingressClassName: "kong"  # If using Kong
-    # Add other Kong-specific annotations if necessary
+    kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-    - host: jenkins.local  # Changed to jenkins.local
+    - host: jenkins.local
       http:
         paths:
           - path: /
