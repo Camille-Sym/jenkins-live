@@ -17,7 +17,7 @@ spec:
       version: v3
   destination:
     server: https://kubernetes.default.svc
-    namespace: jenkins
+    namespace: jenkins-test-local
   syncPolicy:
     automated:
       prune: true
