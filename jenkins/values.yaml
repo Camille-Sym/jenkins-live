@@ -1,5 +1,5 @@
 jenkins:
   fullnameOverride: jenkins
   service:
-    type: ClusterIP
+    type: NodePort  # Or LoadBalancer
     port: 8080
