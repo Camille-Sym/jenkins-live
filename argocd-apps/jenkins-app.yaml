@@ -17,8 +17,10 @@ spec:
       version: v3
   destination:
     server: https://kubernetes.default.svc
-    namespace: jenkins-test-local
+    namespace: jenkins
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+
+

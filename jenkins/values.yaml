@@ -3,5 +3,11 @@ jenkins:
   service:
     type: ClusterIP
     port: 8080
-  chart-admin-password: admin
-  chart-admin-username: admin
+  controller:
+    ingress:
+      enabled: true
+      apiVersion: "networking.k8s.io/v1"
+      hostName: "jenkins.local"
+      ingressClassName: "nginx"
+      annotations:
+      paths:
