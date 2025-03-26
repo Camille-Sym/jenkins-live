@@ -1,8 +1,5 @@
 jenkins:
   fullnameOverride: jenkins
-  service:
-    type: ClusterIP
-    port: 8080
   controller:
     ingress:
       enabled: true
